@@ -1,6 +1,7 @@
 package com.ciam.main;
 
-import com.ciam.block.vgitter;
+import com.ciam.block.*;
+import com.ciam.items.*;
 import com.ciam.blocks.festerblock;
 
 import net.minecraft.block.Block;
@@ -22,7 +23,7 @@ public class ciam
     public static final String VERSION = "1.0";
     
     //Items
-    
+    public static Item dienstmarke = new dienstmarke();
     //Blocks
     public static Block festerblock = new festerblock();
     public static Block vgitter = new vgitter();
@@ -35,12 +36,15 @@ public class ciam
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+    	//Item Registy
+    	GameRegistry.registerItem(dienstmarke, "dienstmarke");
+    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(dienstmarke, 0, new ModelResourceLocation("ciam:dienstmarke","inventory"));
     	
     	//Block Registry
     	GameRegistry.registerBlock(festerblock, "festerblock");
-    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(festerblock), 0, new ModelResourceLocation("CIAM:festerblock","inventory"));
+    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(festerblock), 0, new ModelResourceLocation("ciam:festerblock","inventory"));
     	GameRegistry.registerBlock(vgitter, "vgitter");
-    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(vgitter), 0, new ModelResourceLocation("CIAM:vgitter","inventory"));
+    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(vgitter), 0, new ModelResourceLocation("ciam:vgitter","inventory"));
     	
     }
     
