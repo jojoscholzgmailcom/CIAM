@@ -12,6 +12,7 @@ public class vgitter extends BlockPane{
 		super(Material.iron, true);
 		this.setCreativeTab(CreativeTabs.tabAllSearch);
 		//this.setBlockUnbreakable();
+		this.setUnlocalizedName("vgitter");
 		this.setHardness(10000F);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
 	}

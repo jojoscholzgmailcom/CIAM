@@ -1,7 +1,7 @@
 {
     "parent": "block/pane_nse",
     "textures": {
-        "edge": "blocks/gitter_top",
-        "pane": "blocks/gitter"
+        "edge": "ciam:blocks/vgitter_top",
+        "pane": "ciam:blocks/vgitter"
     }
 }
