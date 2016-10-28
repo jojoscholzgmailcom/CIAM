@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "CIAM:festerblock" }
+        "normal": { "model": "ciam:festerblock" }
         }
 }

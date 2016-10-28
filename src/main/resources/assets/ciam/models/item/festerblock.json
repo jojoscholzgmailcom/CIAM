@@ -1,5 +1,5 @@
 {
-    "parent": "CIAM:block/festerblock",
+    "parent": "ciam:block/festerblock",
     "display": {
         "thirdperson": {
         "rotation" : [ 10, -45, 170 ],

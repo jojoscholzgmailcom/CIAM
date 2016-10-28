@@ -12,6 +12,7 @@ public class festerblock extends Block{
 		this.setUnlocalizedName("festerblock");
 		this.setCreativeTab(CreativeTabs.tabAllSearch);
 		//this.setBlockUnbreakable();
+		this.setHardness(10000F);
 	}
 
 }

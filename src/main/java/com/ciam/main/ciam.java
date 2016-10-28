@@ -14,10 +14,10 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = CIAM.MODID, version = CIAM.VERSION)
-public class CIAM
+@Mod(modid = ciam.MODID, version = ciam.VERSION)
+public class ciam
 {
-    public static final String MODID = "CIAM";
+    public static final String MODID = "ciam";
     public static final String VERSION = "1.0";
     
     //Items
