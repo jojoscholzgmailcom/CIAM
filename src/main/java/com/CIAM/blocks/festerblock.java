@@ -4,9 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Festerblock extends Block{
+public class festerblock extends Block{
 
-	public Festerblock() {
+	public festerblock() {
 		
 		super(Material.rock);
 		this.setUnlocalizedName("festerblock");

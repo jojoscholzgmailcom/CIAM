@@ -1,6 +1,6 @@
 package com.CIAM.main;
 
-import com.CIAM.blocks.Festerblock;
+import com.CIAM.blocks.festerblock;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -23,7 +23,7 @@ public class CIAM
     //Items
     
     //Blocks
-    public static Block festerblock = new Festerblock();
+    public static Block festerblock = new com.CIAM.blocks.festerblock();
     @EventHandler
     public void preinit(FMLPreInitializationEvent preevent)
     {
