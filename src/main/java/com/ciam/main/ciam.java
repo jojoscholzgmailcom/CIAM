@@ -1,5 +1,6 @@
 package com.ciam.main;
 
+import com.ciam.block.vgitter;
 import com.ciam.blocks.festerblock;
 
 import net.minecraft.block.Block;
@@ -24,6 +25,7 @@ public class ciam
     
     //Blocks
     public static Block festerblock = new festerblock();
+    public static Block vgitter = new vgitter();
     @EventHandler
     public void preinit(FMLPreInitializationEvent preevent)
     {
@@ -37,6 +39,9 @@ public class ciam
     	//Block Registry
     	GameRegistry.registerBlock(festerblock, "festerblock");
     	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(festerblock), 0, new ModelResourceLocation("CIAM:festerblock","inventory"));
+    	GameRegistry.registerBlock(vgitter, "vgitter");
+    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(vgitter), 0, new ModelResourceLocation("CIAM:vgitter","inventory"));
+    	
     }
     
     @EventHandler
