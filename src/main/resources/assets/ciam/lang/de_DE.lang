@@ -2,5 +2,5 @@ language.name=Deutsch
 language.region=Deutschland
 language.code=de_DE
 
-block.vgitter.name=Verstärktes Gitter
-block.festerblock.name=Verstärkter Stein
+tile.vgitter.name=Verstärktes Gitter
+tile.festerblock.name=Verstärkter Stein

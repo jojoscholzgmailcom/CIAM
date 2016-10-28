@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "blocks/vgitter"
+        "layer0": "ciam:blocks/vgitter"
     },
     "display": {
         "thirdperson": {
