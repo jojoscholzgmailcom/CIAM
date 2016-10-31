@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "ciam:blocks/vdoor_lower",
+        "top": "ciam:blocks/vdoor_upper"
+    }
+}
