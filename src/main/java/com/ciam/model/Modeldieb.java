@@ -4,6 +4,7 @@ package com.ciam.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 public class Modeldieb extends ModelBase
 {
@@ -80,6 +81,14 @@ public class Modeldieb extends ModelBase
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5,Entity entity)
   {
     super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    this.rightarm.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 2.0F * f1 * 0.5F;
+    this.leftarm.rotateAngleX = MathHelper.cos(f * 0.6662F) * 2.0F * f1 * 0.5F;
+    this.rightarm.rotateAngleZ = 0.0F;
+    this.leftarm.rotateAngleZ = 0.0F;
+    this.rightleg.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+    this.leftleg.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+    this.rightleg.rotateAngleY = 0.0F;
+    this.leftleg.rotateAngleY = 0.0F;
   }
 
 }

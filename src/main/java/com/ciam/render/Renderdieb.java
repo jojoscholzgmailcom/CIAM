@@ -20,7 +20,7 @@ public class Renderdieb extends RenderLiving{
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity) {
 		// TODO Auto-generated method stub
-		return new ResourceLocation(ciam.MODID + "textures/entity/dieb.png");
+		return new ResourceLocation("ciam", "textures/entity/dieb.png");
 	}
 
 }

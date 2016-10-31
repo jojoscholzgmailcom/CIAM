@@ -59,7 +59,7 @@ public class ciam
     	//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(vdoor), 0, new ModelResourceLocation("ciam:vdoor","inventory"));
     	
     	
-    	EntityCreator.createEntity(Entitydieb.class, new Renderdieb(), "dieb", EnumCreatureType.MONSTER, 1, 0, 0, new BiomeGenBase[]{}, 0x00000, 0xFFFFF, true);
+    	EntityCreator.createEntity(Entitydieb.class, new Renderdieb(), "dieb", EnumCreatureType.MONSTER, 1, 0, 0, new BiomeGenBase[]{}, 0x000000, 0xFFFFFF, true);
     }
     
     @EventHandler

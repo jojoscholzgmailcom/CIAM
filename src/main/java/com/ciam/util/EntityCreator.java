@@ -20,7 +20,7 @@ public class EntityCreator {
 		EntityRegistry.addSpawn(entityName, probability, minspawn, maxspawn, type, biomes);
 		RenderingRegistry.registerEntityRenderingHandler(entityClass, render);
 		if(hasspawnegg){
-			EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(entityName, solidcolor, spotcolor));
+			EntityList.entityEggs.put(Integer.valueOf(id), new EntityList.EntityEggInfo(id, solidcolor, spotcolor));
 		}
 	}
 }
