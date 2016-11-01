@@ -27,7 +27,6 @@ public class Entitydieb extends EntityMob{
 		super(worldIn);
 		this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
-        this.tasks.addTask(2, this.field_175455_a);
         this.tasks.addTask(3, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(4, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(5, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
@@ -37,15 +36,15 @@ public class Entitydieb extends EntityMob{
         this.targetTasks.addTask(9, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
         this.targetTasks.addTask(10, new EntityAINearestAttackableTarget(this, EntityVillager.class, true));
         this.targetTasks.addTask(11, new EntityAINearestAttackableTarget(this, EntityIronGolem.class, true));
-   
+        this.targetTasks.addTask(12, new EntityAINearestAttackableTarget(this, Entitywache.class, true));
+        
 	}
 
 	@Override
 	protected void applyEntityAttributes() {
-		super.applyEntityAttributes();
-		getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5);
+		getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(3);
 		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20);
-		getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(40);
+		getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(45);
 		getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.33000000417232513D);
 		getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(0);
 		

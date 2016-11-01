@@ -2,10 +2,10 @@ package com.ciam.main;
 
 import com.ciam.block.*;
 import com.ciam.items.*;
-import com.ciam.render.Renderdieb;
+import com.ciam.render.*;
 import com.ciam.util.EntityCreator;
 import com.ciam.blocks.festerblock;
-import com.ciam.entity.Entitydieb;
+import com.ciam.entity.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -60,6 +60,8 @@ public class ciam
     	
     	
     	EntityCreator.createEntity(Entitydieb.class, new Renderdieb(), "dieb", EnumCreatureType.MONSTER, 1, 0, 0, new BiomeGenBase[]{}, 0x000000, 0xFFFFFF, true);
+    	EntityCreator.createEntity(Entitywache.class, new Renderwache(), "wache", EnumCreatureType.CREATURE, 1, 0, 0, new BiomeGenBase[]{}, 0xFFFFF, 0x000000, true);
+    	
     }
     
     @EventHandler
