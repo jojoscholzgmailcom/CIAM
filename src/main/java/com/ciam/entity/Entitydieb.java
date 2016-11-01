@@ -23,15 +23,15 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class Entitydieb extends EntityMob{
-
+	ciam myCiam = new ciam();
 	public Entitydieb(World worldIn) {
 		super(worldIn);
-		ciam myCiam = new ciam();
+		
 		this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(3, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(2, this.field_175455_a);
         this.tasks.addTask(4, new EntityAIWander(this, 1.0D));
@@ -43,7 +43,7 @@ public class Entitydieb extends EntityMob{
         this.tasks.addTask(7, new EntityAIAttackOnCollide(this, EntityIronGolem.class, 1.0D, true));
         this.tasks.addTask(13, new EntityAIAttackOnCollide(this, Entitywache.class, 1.0D, true));
         if(myCiam.getStimmung() > 25){
-        	this.tasks.addTask(17, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
+        	this.tasks.addTask(17, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         }
         this.tasks.addTask(8, new EntityAIMoveThroughVillage(this, 1.0D, false));
         if(myCiam.getStimmung() > 50){
@@ -66,5 +66,11 @@ public class Entitydieb extends EntityMob{
 		
 		
 	}
-	
+	@Override
+	public void onDeath(DamageSource cause) {
+		
+			myCiam.setStimmung(25);
+		
+		super.onDeath(cause);
+	}
 }

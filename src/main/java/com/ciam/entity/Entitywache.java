@@ -1,5 +1,7 @@
 package com.ciam.entity;
 
+import com.ciam.main.ciam;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLivingBase;
@@ -26,14 +28,22 @@ public class Entitywache extends EntityMob{
 
 	public Entitywache(World worldIn) {
 		super(worldIn);
+		ciam myCiam = new ciam();
 		this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
+		if(myCiam.getStimmung() < 75){
+        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
+		}
         this.tasks.addTask(3, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(4, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(5, new EntityAIWatchClosest(this, Entitydieb.class, 8.0F));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         
         this.tasks.addTask(6, new EntityAILookIdle(this));
+        
+		if(myCiam.getStimmung() < 50){
+			this.tasks.addTask(7, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, true));
+		}
+		
         this.tasks.addTask(7, new EntityAIAttackOnCollide(this, Entitydieb.class, 1.0D, true));
         this.targetTasks.addTask(9, new EntityAINearestAttackableTarget(this, Entitydieb.class, true));
         
